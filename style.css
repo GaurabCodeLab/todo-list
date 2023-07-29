@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+/* Header Design */
+.header{
+    height: 50vh;
+    background-image: url("bg-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+
+.header h1{
+    float: left;
+    color: white;
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
+}
+
+.list-item{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.list-item li{
+    margin-right: 10rem;
+    margin-top: 0.5rem;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+
+.details{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.details h3{
+    color: white;
+    font-size: x-large;
+}
+
+.details button{
+    display: inline-block;
+    margin-left: 3.3rem;
+    margin-top: 0.5rem;
+    padding: 0.45rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: larger;
+    border: none;
+    outline: none;
+}
+
+/* Main Design */
+.todo-section{
+    width: 82vw;
+    height: 400px;
+    overflow-y: auto;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;  
+}
+
+.todo-section h2{
+    text-align: center;
+}
+
+.todo-section input{
+    display: inline-block;
+    padding: 0.5rem;
+    width: 74%;
+    height: 2.3rem;
+}
+
+.remove-all, .add-todo-btn{
+    display: inline-block;
+    width: 11.5%;
+    height: 2.3rem;
+    margin-left: 0.7rem;
+    background-color: rgb(73, 64, 64);
+    color: white;
+    cursor: pointer;
+}
+
+.todo-details{
+    background-color: rgb(73, 64, 64);
+    color: white;
+    margin-top: 1rem;
+    height: 3.2rem;
+    position: relative;
+}
+
+.todo-empty{
+    background-color: rgb(149, 230, 68);
+    color: rebeccapurple;
+    margin-top: 1rem;
+    height: 3.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+} 
+
+.todo-empty h4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pending{
+    display: none;
+}
+
+.remove, .done{
+    width: 11.5%;
+    height: 2.3rem;
+    margin-left: 0.7rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    border: none;
+    outline: none;
+}
+
+.todo-section span{
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    transform: translateY(-50%);
+}
+
+.remove-all{
+    display: none;
+}
+
+.form-section{
+    background-color: rgb(211, 202, 191);
+    width: 82vw;
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+}
+
+.form-section h2{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.form-section input{
+    display: block;
+    padding: 0.5rem;
+    width: 60%;
+    margin: 0.1rem auto 1.5rem auto;
+    height: 2.5rem;
+}
+
+label{
+    margin-left: 20%;
+    font-size: large;
+}
+
+textarea{
+    display: block;
+    width: 60%;
+    height: 10rem;
+    padding: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-section button{
+    display: block;
+    border: none;
+    outline: none;
+    height: 2.5rem;
+    width: 5.5rem;
+    margin: 1.5rem auto;
+    cursor: pointer;
+    background-color: rgb(73, 64, 64);
+    color: white;
+}
+
+::placeholder{
+    padding-left: 0.4rem;
+}
+

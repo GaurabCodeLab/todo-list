@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Website</h1>
+        <nav>
+            <ul class="list-item">
+                <li><a href="#" class="link">Home</a></li>
+                <li><a href="#" class="link">Todo</a></li>
+                <li><a href="#" class="link">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="details">
+            <h3>Manage Your Tasks</h3>
+            <button>Learn More</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="todo-section">
+            <h2>Your Plan For Today ?</h2>
+            <input type="text" placeholder="Add Todo" class="add-todo">
+            <button class="add-todo-btn">Add Todo</button>
+            <button class="remove-all" >Remove All</button>
+            <div class="todo-empty" >
+                <h4 class="completed" >You have no pending tasks</h4>
+                <h4 class="pending" >Your Pending Tasks</h4>
+            </div>
+        </section>
+        <section class="form-section">
+            <h2>Sign Up</h2>
+            <form>
+                <label for="username">User Name</label>
+                <input type="text" placeholder="Enter Your Name" id="username">
+                <label for="pswd">Password</label>
+                <input type="password" placeholder="Enter Password" id="pswd">
+                <label for="cnfpswd">Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" id="cnfpswd">
+                <label for="phone">Mobile No.</label>
+                <input type="tel" placeholder="Enter Mobile No." id="phone">
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="Enter Your Email" id="email">
+                <label for="about">About Yourself</label>
+                <textarea id="about" cols="30" rows="10"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
