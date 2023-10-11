@@ -7,13 +7,19 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
 body{
     background-color: aliceblue;
 }
 
 /* Header Design */
 .header{
-    height: 50vh;
+    height: 50%;
+    width: 100%;
     background-image: url("bg-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,22 +27,25 @@ body{
 
 }
 
-.header h1{
-    float: left;
-    color: white;
-    margin-top: 0.3rem;
-    margin-left: 0.5rem;
+.header nav{
+    padding-top: 1vmax;
+    margin-left: 2vmax;
+    margin-right: 2vmax;
+    display: flex;
+   justify-content: space-between;
 }
 
-.list-item{
+.header nav ul{
     display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
+    gap: 15vmax;
+}
+
+.header h1{
+    color: aliceblue;
 }
 
 .list-item li{
-    margin-right: 10rem;
-    margin-top: 0.5rem;
+    list-style-type: none;
 }
 
 .link{
@@ -68,11 +77,21 @@ body{
     font-size: larger;
     border: none;
     outline: none;
+    border-radius: 5px;
+}
+
+.details button:hover{
+    background-color: aqua;
+    color: gray;
 }
 
 /* Main Design */
+main{
+    width: 100%;
+    margin-bottom: 3vmax;
+}
 .todo-section{
-    width: 82vw;
+    width: 80%;
     height: 400px;
     overflow-y: auto;
     margin-top: 3rem;
@@ -88,52 +107,66 @@ body{
 .todo-section input{
     display: inline-block;
     padding: 0.5rem;
-    width: 74%;
+    width: 70%;
     height: 2.3rem;
 }
 
 .remove-all, .add-todo-btn{
     display: inline-block;
-    width: 11.5%;
-    height: 2.3rem;
+    padding: 0.6vmax 2vmax;
     margin-left: 0.7rem;
     background-color: rgb(73, 64, 64);
     color: white;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .todo-details{
     background-color: rgb(73, 64, 64);
+    width: 100%;
+    padding: 1vmax;
     color: white;
-    margin-top: 1rem;
-    height: 3.2rem;
+    margin-top: 2vmax;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.todo-details h3{
+   max-width: 100%;
+   word-wrap: break-word;
+}
+
+.todo-details button{
+    margin-top: 0.4vmax;
 }
 
 .todo-empty{
     background-color: rgb(149, 230, 68);
     color: rebeccapurple;
     margin-top: 1rem;
-    height: 3.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 2;
+    height: 4vmax;
+    width: 100%;
+    position: relative;
 } 
 
 .todo-empty h4{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+   position: absolute; 
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
 }
 
 .pending{
     display: none;
 }
 
-.remove, .done{
-    width: 11.5%;
-    height: 2.3rem;
+.remove, .done, .undo{
+    padding: 0.6vmax 2vmax;
     margin-left: 0.7rem;
     margin-top: 0.5rem;
     margin-right: 0.5rem;
@@ -142,6 +175,7 @@ body{
     float: right;
     border: none;
     outline: none;
+    border-radius: 10px;
 }
 
 .todo-section span{
@@ -153,21 +187,22 @@ body{
 
 .remove-all{
     display: none;
+    margin-top: 1vmax;
+    border-radius: 10px;
 }
 
 .form-section{
     background-color: rgb(211, 202, 191);
-    width: 82vw;
-    margin-top: 1.5rem;
-    margin-bottom: 5rem;
+    border-radius: 10px;
+    width: 82%;
+   padding-top: 0.5vmax;
+    padding-bottom: 1vmax;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 1rem;
 }
 
 .form-section h2{
     text-align: center;
-    margin-top: 1rem;
 }
 
 .form-section input{
@@ -199,6 +234,7 @@ textarea{
     height: 2.5rem;
     width: 5.5rem;
     margin: 1.5rem auto;
+    border-radius: 10px;
     cursor: pointer;
     background-color: rgb(73, 64, 64);
     color: white;
@@ -208,3 +244,73 @@ textarea{
     padding-left: 0.4rem;
 }
 
+footer{
+    width: 100%;
+    padding-bottom: 0.2vmax;
+    height: 3.5vmax;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer p{
+    color: white;
+    font-size: 1.7vmax;
+    font-weight: 500;
+}
+
+ @media (max-width : 600px){
+    .form-section{
+        width: 100%;
+        border-radius: 0;
+    }
+    .form-section h2{
+        margin-bottom: 2vmax;
+       padding-top: 2vmax;
+    }
+
+    .header nav{
+        flex-direction: column;
+    }
+
+    .header nav ul{
+        flex-direction: column;
+        gap: 0;
+    }
+    .details button{
+        padding: 0.8vmax 1.4vmax;
+    }
+    .details{
+        width: 80%;
+        transform: translate(0%, 0%);
+        left: 20%;
+        top: 50%;
+    }
+    .todo-section{
+        width: 100%;
+        padding: 0 2vmax;
+    }
+    .todo-section input{
+       width: 100%;
+    }
+    .add-todo-btn, .remove-all{
+        margin-top: 1.5vmax;
+    }
+    .todo-empty h4{
+        text-align: center;
+        width: 100%;
+    }
+    .form-section{
+        padding: 2vmax;
+    }
+    .form-section input{
+        width: 100%;
+    }
+    .form-section textarea{
+        width: 100%;
+    }
+    label{
+        margin-left: 0;
+    }
+}
